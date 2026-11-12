@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặc sản Thanh Hóa</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <span class="logo">TH</span>
+      <span class="brand-name">Đặc sản Thanh Hóa</span>
+    </div>
+    <input id="search" class="search" type="text" placeholder="Tìm nem chua, chè lam, mực khô,...">
+    <button id="cart-open" class="cart-btn">Giỏ hàng <span id="cart-count">0</span></button>
+  </header>
+
+  <main class="container">
+    <div id="product-list" class="grid"></div>
+  </main>
+
+  <!-- Nút chatbot -->
+  <button id="chat-open" class="chat-fab" aria-label="Mở chatbot">💬</button>
+
+  <!-- Giỏ hàng -->
+  <aside id="cart" class="panel cart-panel">
+    <div class="panel-head">
+      <h2>Giỏ hàng</h2>
+      <button class="close" data-close="cart">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+   <div class="cart-foot">
+  <button id="cart-clear" class="btn-clear">Xóa tất cả</button>
+  <div class="subtotal">
+    <span>Tạm tính</span>
+    <strong id="subtotal">0đ</strong>
+  </div>
+  <button class="btn-main">Đặt hàng</button>
+</div>
+  </aside>
+
+  <!-- Chatbot -->
+  <aside id="chatbot" class="panel chat-panel">
+    <div class="panel-head">
+      <h2>Chatbot trợ giúp</h2>
+      <button class="close" data-close="chatbot">✕</button>
+    </div>
+    <div id="chat-body" class="chat-body"></div>
+    <form id="chat-form" class="chat-form">
+      <input id="chat-input" type="text" placeholder="Nhập câu hỏi...">
+      <button class="btn-main" type="submit">Gửi</button>
+    </form>
+  </aside>
+
+  <script src="main.js"></script>
+</body>
